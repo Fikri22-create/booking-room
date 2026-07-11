@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f4f6f9;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── Custom toast animations ── */
+@keyframes shrink {
+  from { width: 100%; }
+  to   { width: 0%; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(2rem); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+.animate-shrink {
+  animation: shrink linear forwards;
+}
+
+.toast-enter {
+  animation: slideInRight 0.25s ease-out forwards;
+}
